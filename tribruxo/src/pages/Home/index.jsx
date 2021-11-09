@@ -9,13 +9,13 @@ const Home = ({ characters }) => {
   const house1 = [];
   const house2 = [];
   const house3 = [];
-  const finder = characters.filter( (char) => {
+  characters.filter( (char) => {
     if (char.house === "Gryffindor") { house1.push(char)}
     if (char.house === "Slytherin") { house2.push(char)}
     if (char.house === "Hufflepuff") { house3.push(char)}
-  })
-  const random1 = Math.floor(Math.random() * (11 - 0) + 0);
-  const random2 = Math.floor(Math.random() * (11 - 0) + 0);
+    return ""} )
+  const random1 = Math.floor(Math.random() * (24 - 0) + 0);
+  const random2 = Math.floor(Math.random() * (18 - 0) + 0);
   const random3 = Math.floor(Math.random() * (11 - 0) + 0);
   const selected1 = house1[random1]
   const selected2 = house2[random2]
