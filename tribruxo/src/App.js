@@ -1,6 +1,7 @@
 import "./App.css";
 import { Component } from "react";
-import Home from "./components/Home";
+import Home from "./pages/Home";
+import {Switch, Route} from "react-router-dom";
 
 class App extends Component {
   state = {
@@ -22,7 +23,13 @@ class App extends Component {
     return (
       <div className="App">
         <section className="App-header">
-          <div>{<Home characters={characters}></Home>}</div>
+
+        <Switch>
+          <Route exact path="/">
+            <Home characters={characters}></Home>
+          </Route>
+        </Switch>
+
         </section>
       </div>
     );

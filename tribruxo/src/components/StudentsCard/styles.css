@@ -2,25 +2,58 @@ li {
     list-style: none;
   }
   
+  .containerStudents {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:25px;
+}
+
+.card{
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);}
+
+.card:hover{
+    filter: brightness(1.2);
+    cursor: pointer;
+}
+
+  @media only screen and (max-width: 540px) {
+
+.containerStudents{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+  }
+  
   .card {
     color: black;
     border: 2px solid black;
     background-color: rgb(224, 224, 206);
-    width: 150px;
-    height: 250px;
+    width: 130px;
+    height: 210px;
     font-size: 14px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: center;
-    margin: 15px 15px 15px 15px;
+    margin: 10px;
   }
   
   .picture {
-    width: 135px;
-    height: 180px;
+    width: 120px;
+    height: 135px;
     border: 2px solid gold;
+  }
+
+  .pictureOff {
+    background-image: url("../../img/user.png");
+    background-size: cover;
+    height: 140px;
+    width: 124px;
   }
   
   span {
@@ -40,15 +73,21 @@ li {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
   }
   
-  @media only screen and (max-width: 600px) {
+  @media only screen and (min-width: 600px) {
     .card {
-      width: 100px;
-      margin: 10px;
-      height: 150px;
+      width: 140px;
+      margin: 15px;
+      height: 230px;
     }
   
     .picture {
-      width: 95px;
+      height: 150px;
+      width: 120px;
     }
+    .pictureOff{
+      height: 140px;
+      width: 124px;
+    }
+    
   }
   
